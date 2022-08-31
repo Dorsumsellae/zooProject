@@ -8,7 +8,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,13 +28,14 @@ public class MapActivity extends Activity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if ((event.getActionMasked() == MotionEvent.ACTION_UP) && (event.getX()< Resources.getSystem().getDisplayMetrics().widthPixels/2)){
+        if ((event.getActionMasked() == MotionEvent.ACTION_UP) &&
+                (event.getX() < Resources.getSystem().getDisplayMetrics().widthPixels/2.0)){
             Intent i = new Intent(this, TankActivity.class);
             startActivity(i);
         }
         if (event.getActionMasked() == MotionEvent.ACTION_UP){
-            Log.d("TankActivity", "X :"+Integer.toString((int) event.getX())+" ---- Y :"+ Integer.toString((int) event.getY()));
-            Float.toString()
+            Log.d("TankActivity", "X :"+ event.getX()+" ---- Y :"+
+                    event.getY());
         }
         return true;
     }

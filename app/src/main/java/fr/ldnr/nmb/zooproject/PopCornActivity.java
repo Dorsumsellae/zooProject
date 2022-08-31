@@ -13,32 +13,33 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-public class TankActivity extends Activity {
+public class PopCornActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new TankView(this));
-        Log.i("TankActivity", "onCreate: ");
+        setContentView(new PopCornView(this));
+        Log.i("PopCornActivity", "onCreate");
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if(event.getActionMasked() == MotionEvent.ACTION_UP){
-            Intent i = new Intent(this, PopCornActivity.class);
+            Intent i = new Intent(this, MapActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(i);
         }
         return true;
     }
 
-    public class TankView extends View{
+    public class PopCornView extends View {
 
-        public TankView(Context context) {
+        public PopCornView(Context context) {
             super(context);
         }
 
         @Override
         protected void onDraw(Canvas canvas) {
-            Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.drawable.tank);
+            Bitmap bmp = BitmapFactory.decodeResource(getResources(),R.drawable.pop_corn);
             canvas.drawBitmap(bmp, 0,0, null);
         }
     }
