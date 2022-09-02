@@ -24,18 +24,30 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.home_layout);
         readNewsFromFile();
 
-        Button button_map = findViewById(R.id.button_map);
-        button_map.setOnClickListener(btnMapListener);
+        Button map_btn = findViewById(R.id.map_btn);
+        map_btn.setOnClickListener(btnMapListener);
+
+        Button alert_btn = findViewById(R.id.alert_btn);
+        alert_btn.setOnClickListener(btnAlertListener);
     }
 
     public void toMap() {
         Intent i = new Intent(this, MapActivity.class);
         startActivity(i);
     }
+    public void toAlertActivity() {
+        Intent i = new Intent(this, AlertActivity.class);
+        startActivity(i);
+    }
 
     private final View.OnClickListener btnMapListener = view -> {
         Log.i("HomeActivity", "onClick");
         toMap();
+    };
+
+    private final View.OnClickListener btnAlertListener = view -> {
+        Log.i("HomeActivity", "onClick");
+        toAlertActivity();
     };
 
     private void readNewsFromFile() {

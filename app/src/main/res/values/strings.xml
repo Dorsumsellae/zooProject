@@ -21,4 +21,10 @@
     <string name="home_tvInfos">Bienvenue les gens dans notre <b>zoo</b> plutôt <i>chouette</i> de 12 000 km<sup><small>2</small></sup>.\nN\'hésitez pas à vous <b>taillez</b> la part du <u>lion</u>.\nEn cas de problème,ou d\'éléphant dans les boutiques de porcelaine, n\'ayez pas peur de donner votre langue au chat et contacter le +33 6 79 12 12 12</string>
     <string name="home_tvNews">Les news</string>
     <string name="stub" translatable="false">**********</string>
+    <string name="alert_title">Alerte</string>
+    <string name="alert_input_title">Intitulé</string>
+    <string name="urgent">Urgent</string>
+    <string name="alert_input_local">Lieu</string>
+    <string name="alert_input_info">Informations</string>
+    <string name="alert_btn_submit">Envoyer</string>
 </resources>

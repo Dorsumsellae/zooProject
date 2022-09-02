@@ -21,6 +21,7 @@
         <activity android:name=".MapActivity" android:label="@string/zoo_map_title"/>
         <activity android:name=".TankActivity" android:label="@string/tank_title"/>
         <activity android:name=".PopCornActivity" android:label="@string/popcorn_title"/>
+        <activity android:name=".AlertActivity" android:label="@string/alert_title"/>
 
     </application>
 
