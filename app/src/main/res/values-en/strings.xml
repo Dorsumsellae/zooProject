@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zoo_map_title">Zoo map</string>
+    <string name="tank_title">Tank</string>
+    <string name="popcorn_title">Popcorn</string>
+    <string name="map_welcome">Welcome</string>
+    <string name="alert_popcorn">No popcorn to %1$s ( %2$03d %3$s ) !</string>
+    <array name="popcorn_species">
+        <item>fishes</item>
+        <item>dolphins</item>
+        <item>turtles</item>
+        <item>beluga</item>
+    </array>
+    <plurals name="popcorn_seconds">
+        <item quantity="one">second</item>
+        <item quantity="other">seconds</item>
+    </plurals>
+    <string name="button_map">Map</string>
+    <string name="home_tvSubtileText">Official App</string>
+    <string name="home_tvInfos">Infos</string>
+    <string name="home_tvNews">News</string>
+</resources>

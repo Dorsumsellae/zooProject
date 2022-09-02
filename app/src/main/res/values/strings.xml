@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">zooProject</string>
+    <string name="app_name" translatable="false">zooProject</string>
+    <string name="zoo_map_title">Carte du zoo</string>
+    <string name="tank_title">Aquarium</string>
+    <string name="popcorn_title">Popcorn</string>
+    <string name="map_welcome">Bienvenue</string>
+    <string name="alert_popcorn">Pas de popcorn aux %1$s ( %2$03d %3$s ) !</string>
+    <array name="popcorn_species">
+        <item>poissons</item>
+        <item>dauphins</item>
+        <item>tortues</item>
+        <item>beluga</item>
+    </array>
+    <plurals name="popcorn_seconds">
+        <item quantity="one">seconde</item>
+        <item quantity="other">secondes</item>
+    </plurals>
+    <string name="home_title" translatable="false">ZooProject</string>
+    <string name="button_map">Carte</string>
+    <string name="home_tvSubtileText">App Officielle</string>
+    <string name="home_tvInfos">Bienvenue les gens dans notre <b>zoo</b> plutôt <i>chouette</i> de 12 000 km<sup><small>2</small></sup>.\nN\'hésitez pas à vous <b>taillez</b> la part du <u>lion</u>.\nEn cas de problème,ou d\'éléphant dans les boutiques de porcelaine, n\'ayez pas peur de donner votre langue au chat et contacter le +33 6 79 12 12 12</string>
+    <string name="home_tvNews">Les news</string>
+    <string name="stub" translatable="false">**********</string>
 </resources>

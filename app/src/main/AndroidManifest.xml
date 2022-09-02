@@ -11,15 +11,16 @@
         android:supportsRtl="true"
         tools:targetApi="31">
 
-        <activity android:name=".MapActivity" android:exported="true">
+        <activity android:name=".HomeActivity" android:exported="true" android:label="@string/home_title">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".TankActivity"/>
-        <activity android:name=".PopCornActivity"/>
+        <activity android:name=".MapActivity" android:label="@string/zoo_map_title"/>
+        <activity android:name=".TankActivity" android:label="@string/tank_title"/>
+        <activity android:name=".PopCornActivity" android:label="@string/popcorn_title"/>
 
     </application>
 

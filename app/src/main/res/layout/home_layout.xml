@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_map" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_tvSubtileText" />
+
+    <TextView
+        android:id="@+id/tvInfos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:text="@string/home_tvInfos" />
+
+    <TextView
+        android:id="@+id/tvNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stub" />
+
+</LinearLayout>
