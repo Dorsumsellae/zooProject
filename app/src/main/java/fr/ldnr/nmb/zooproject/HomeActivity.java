@@ -27,6 +27,9 @@ public class HomeActivity extends Activity {
         Button map_btn = findViewById(R.id.map_btn);
         map_btn.setOnClickListener(btnMapListener);
 
+        Button annuaire_btn = findViewById(R.id.annuaire_btn);
+        annuaire_btn.setOnClickListener(btnAnnuaireListener);
+
         Button alert_btn = findViewById(R.id.alert_btn);
         alert_btn.setOnClickListener(btnAlertListener);
     }
@@ -39,6 +42,15 @@ public class HomeActivity extends Activity {
         Intent i = new Intent(this, AlertActivity.class);
         startActivity(i);
     }
+
+    public void toAnnuaireActivity() {
+        Intent i = new Intent(this, AnnuaireActivity.class);
+        startActivity(i);
+    }
+
+    private final View.OnClickListener btnAnnuaireListener = view -> {
+        toAnnuaireActivity();
+    };
 
     private final View.OnClickListener btnMapListener = view -> {
         Log.i("HomeActivity", "onClick");

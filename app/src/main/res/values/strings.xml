@@ -27,4 +27,13 @@
     <string name="alert_input_local">Lieu</string>
     <string name="alert_input_info">Informations</string>
     <string name="alert_btn_submit">Envoyer</string>
+
+    <array name="places">
+        <item>Enclos des ours</item>
+        <item>Enclos des lions</item>
+        <item>Aquarium</item>
+        <item>Boutique de souvenirs</item>
+    </array>
+    <string name="alert_confimation">Voulez-vous envoyer cette alerte</string>
+    <string name="title_activity_annuaire">Annuaire</string>
 </resources>

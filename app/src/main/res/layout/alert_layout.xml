@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/alert_intitulé_TV"
@@ -29,12 +29,12 @@
         android:text="@string/alert_input_local"
         android:labelFor="@id/alert_lieu_input" />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/alert_lieu_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textCapSentences"
+        android:inputType="textAutoComplete"
         android:minHeight="48dp"
         android:text="" />
 
@@ -48,11 +48,14 @@
     <EditText
         android:id="@+id/alert_informations_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
+        android:layout_weight="2"
+        android:lines="8"
         android:ems="10"
         android:inputType="textCapSentences|textMultiLine"
         android:minHeight="48dp"
-        android:text="" />
+        android:text=""
+        android:gravity="start|top"/>
 
     <CheckBox
         android:id="@+id/alert_urgent_CB"
