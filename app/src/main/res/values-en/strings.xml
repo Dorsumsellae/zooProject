@@ -27,4 +27,8 @@
     <string name="alert_btn_submit">Envoyer</string>
     <string name="alert_confimation">"Do you want send this alert ? "</string>
     <string name="title_activity_annuaire">Directory</string>
+    <string name="title_name_column"><![CDATA[<b>Nom</b>]]></string>
+    <string name="title_function_column">Fonction</string>
+    <string name="title_phone_column">Téléphone</string>
+    <string name="options">Options</string>
 </resources>

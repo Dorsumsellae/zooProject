@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menu_map"
+    android:title="@string/zoo_map_title"
+    android:icon="@android:drawable/ic_menu_myplaces"
+    android:showAsAction="ifRoom"/>
+<item
+    android:id="@+id/menu_alert"
+    android:title="@string/alert_title"
+    android:icon="@android:drawable/ic_menu_info_details"
+    android:showAsAction="ifRoom"/>
+<item
+    android:id="@+id/menu_options"
+    android:title="@string/options"
+    android:icon="@android:drawable/ic_menu_preferences"
+    android:showAsAction="ifRoom">
+    <menu>
+        <item
+            android:id="@+id/menu_envoyer"
+            android:title="@string/alert_btn_submit"
+            android:icon="@android:drawable/ic_menu_send"
+            android:checkable="true"/>
+    </menu>
+    </item>
+
+</menu>

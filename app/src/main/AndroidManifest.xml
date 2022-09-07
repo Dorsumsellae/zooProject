@@ -32,11 +32,13 @@
             android:label="@string/popcorn_title" />
         <activity
             android:name=".AlertActivity"
-            android:label="@string/alert_title" />
+            android:label="@string/alert_title"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.Alert"/>
 
         <activity
             android:name=".AnnuaireActivity"
-            android:label="@string/title_activity_annuaire" />
+            android:label="@string/title_activity_annuaire"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"/>
     </application>
 
 </manifest>

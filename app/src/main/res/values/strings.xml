@@ -36,4 +36,8 @@
     </array>
     <string name="alert_confimation">Voulez-vous envoyer cette alerte</string>
     <string name="title_activity_annuaire">Annuaire</string>
+    <string name="title_name_column"><b>Nom</b></string>
+    <string name="title_function_column"><b>Fonction</b></string>
+    <string name="title_phone_column"><b>Téléphone</b></string>
+    <string name="options">Options</string>
 </resources>

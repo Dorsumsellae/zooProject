@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -32,6 +33,12 @@ public class HomeActivity extends Activity {
 
         Button alert_btn = findViewById(R.id.alert_btn);
         alert_btn.setOnClickListener(btnAlertListener);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.acceuil, menu);
+        return true;
     }
 
     public void toMap() {
