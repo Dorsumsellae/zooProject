@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.io.BufferedReader;
@@ -39,6 +41,24 @@ public class HomeActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.acceuil, menu);
         return true;
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featureId, @NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_map:
+                toMap();
+                return true;
+            case R.id.menu_alert:
+                toAlertActivity();
+                return true;
+            case R.id.menu_envoyer:
+                item.setChecked(!item.isChecked());
+                return true;
+            default:
+                return false;
+        }
+
     }
 
     public void toMap() {
