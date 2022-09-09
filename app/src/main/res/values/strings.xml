@@ -40,4 +40,14 @@
     <string name="title_function_column"><b>Fonction</b></string>
     <string name="title_phone_column"><b>Téléphone</b></string>
     <string name="options">Options</string>
+    <string name="specie_title">Espece</string>
+    <string name="age_max">Age max</string>
+    <string name="specie_form_name">Nom</string>
+    <string name="submit">Enregistrer</string>
+    <string name="confimation_save">Voulez-vous confirmer l\'enregistrement</string>
+    <string name="nom">Nom</string>
+    <string name="age">Age</string>
+    <string name="date_arrive">Date d\'arrivée</string>
+    <string name="box">Enclos</string>
+    <string name="animals_title">Ajouter un animal</string>
 </resources>

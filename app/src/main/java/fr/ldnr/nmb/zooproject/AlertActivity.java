@@ -3,7 +3,9 @@ package fr.ldnr.nmb.zooproject;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -23,6 +25,7 @@ public class AlertActivity extends Activity {
         builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                Log.d("SpecieActivity", "onClick: Yes");
                 confirm();
             }
         });
@@ -47,12 +50,17 @@ public class AlertActivity extends Activity {
         AutoCompleteTextView inputPlace = findViewById(R.id.alert_lieu_input);
         EditText[] inputs = {inputIntitule, inputInfos, inputPlace};
 
+        SharedPreferences preferences = getSharedPreferences("zoo", MODE_PRIVATE);
+        boolean sendIsChecked = preferences.getBoolean("sendIsChecked", false);
+
         CheckBox isUrgentCB = findViewById(R.id.alert_urgent_CB);
 
         String alertIntitule = inputIntitule.getText().toString();
         String message = "Intitulé incorecte";
 
-        if (alertIntitule.length() > 5 && alertIntitule.length() < 40) {
+        if (!sendIsChecked) {
+            message = "Envoi désactivé";
+        } else if ((alertIntitule.length() > 5 && alertIntitule.length() < 40)) {
             boolean isUrgent = isUrgentCB.isChecked();
             message = "Envoi " + alertIntitule;
             if (isUrgent) {

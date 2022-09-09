@@ -2,6 +2,7 @@ package fr.ldnr.nmb.zooproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -35,11 +36,19 @@ public class HomeActivity extends Activity {
 
         Button alert_btn = findViewById(R.id.alert_btn);
         alert_btn.setOnClickListener(btnAlertListener);
+
+        Button specie_btn = findViewById(R.id.specie_btn);
+        specie_btn.setOnClickListener(btnSpecieListener);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.acceuil, menu);
+        //read from shared preferences
+        SharedPreferences preferences = getSharedPreferences("zoo", MODE_PRIVATE);
+        boolean sendIsChecked = preferences.getBoolean("sendIsChecked", false);
+        MenuItem sendItem = menu.findItem(R.id.menu_send);
+        sendItem.setChecked(sendIsChecked);
         return true;
     }
 
@@ -52,27 +61,25 @@ public class HomeActivity extends Activity {
             case R.id.menu_alert:
                 toAlertActivity();
                 return true;
-            case R.id.menu_envoyer:
+            case R.id.menu_animal:
+                toAnimalActivity();
+                return true;
+            case R.id.menu_send:
                 item.setChecked(!item.isChecked());
+            case R.id.menu_specie:
+                toSpecieActivity();
+
+                //save to shared preferences
+                SharedPreferences sp = getSharedPreferences("zoo", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putBoolean("sendIsChecked", item.isChecked());
+                editor.commit();
+
                 return true;
             default:
                 return false;
         }
 
-    }
-
-    public void toMap() {
-        Intent i = new Intent(this, MapActivity.class);
-        startActivity(i);
-    }
-    public void toAlertActivity() {
-        Intent i = new Intent(this, AlertActivity.class);
-        startActivity(i);
-    }
-
-    public void toAnnuaireActivity() {
-        Intent i = new Intent(this, AnnuaireActivity.class);
-        startActivity(i);
     }
 
     private final View.OnClickListener btnAnnuaireListener = view -> {
@@ -88,6 +95,32 @@ public class HomeActivity extends Activity {
         Log.i("HomeActivity", "onClick");
         toAlertActivity();
     };
+    private final View.OnClickListener btnSpecieListener = view -> {
+        toSpecieActivity();
+    };
+
+
+    public void toMap() {
+        Intent i = new Intent(this, MapActivity.class);
+        startActivity(i);
+    }
+    public void toAlertActivity() {
+        Intent i = new Intent(this, AlertActivity.class);
+        startActivity(i);
+    }
+    public void toAnnuaireActivity() {
+        Intent i = new Intent(this, AnnuaireActivity.class);
+        startActivity(i);
+    }
+    public void toSpecieActivity() {
+        Intent i = new Intent(this, SpecieActivity.class);
+        startActivity(i);
+    }
+
+    public void toAnimalActivity() {
+        Intent i = new Intent(this, AnimalsActivity.class);
+        startActivity(i);
+    }
 
     private void readNewsFromFile() {
         TextView newsTV = findViewById(R.id.tvNews);
