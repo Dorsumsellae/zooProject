@@ -89,9 +89,9 @@ public class ZooOpenHelper extends SQLiteOpenHelper {
     }
 
     //function to read all species in database
-    public List<String> readAllSpecies(){
+    public List<String> getAllSpeciesName(){
         SQLiteDatabase db = getReadableDatabase();
-        String read = "SELECT * FROM species ORDER BY name";
+        String read = "SELECT name FROM species ORDER BY name";
         Cursor cursor = db.rawQuery(read, null);
         ArrayList<String> species = new ArrayList<>();
         while (cursor.moveToNext()){
@@ -114,6 +114,19 @@ public class ZooOpenHelper extends SQLiteOpenHelper {
         String update = "UPDATE box SET name = ?, surface = ? WHERE id = ?";
         db.execSQL(update, new Object[]{name, surface, id});
         db.close();
+    }
+
+    //function to get all boxes name in database
+    public List<String> getAllBoxesName(){
+        SQLiteDatabase db = getReadableDatabase();
+        String read = "SELECT name FROM box ORDER BY name";
+        Cursor cursor = db.rawQuery(read, null);
+        ArrayList<String> boxes = new ArrayList<>();
+        while (cursor.moveToNext()){
+            boxes.add(cursor.getString(0));
+        }
+        db.close();
+        return boxes;
     }
 
     //function to insert an animal in database
