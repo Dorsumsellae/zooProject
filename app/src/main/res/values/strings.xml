@@ -50,4 +50,5 @@
     <string name="date_arrive">Date d\'arrivée</string>
     <string name="box">Enclos</string>
     <string name="animals_title">Ajouter un animal</string>
+    <string name="search">Rechercher</string>
 </resources>

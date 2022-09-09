@@ -37,10 +37,29 @@
         android:minHeight="48dp"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <Button
-        android:id="@+id/specie_form_submit"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/specie_form_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit" />
+
+        <Button
+            android:id="@+id/specie_search_form_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/specie_search_form_tv"/>
 
 </LinearLayout>
